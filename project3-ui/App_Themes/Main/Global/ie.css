@@ -1,0 +1,31 @@
+.brand {
+	background: url(../img/aum_logo_small.png) no-repeat;
+	}
+	
+#social .facebook {
+	background: url(../img/social_facebook_small.png) no-repeat;
+	}
+	
+#social .twitter {
+	background: url(../img/social_twitter_small.png) no-repeat;
+	}
+	
+#social .wordpress {
+	background: url(../img/social_wordpress_small.png) no-repeat;
+	}
+	
+#social .youtube {
+	background: url(../img/social_youtube_small.png) no-repeat;
+	}
+	
+#social .instagram {
+	background: url(../img/social_instagram_small.png) no-repeat;
+	}
+	
+.column {
+	margin: 20px 12px 20px 0;
+	}
+	
+nav li {
+	margin-bottom: 0;
+	}

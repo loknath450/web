@@ -1,0 +1,1756 @@
+/* Structure Styles */
+
+body {
+    background: white;
+    font: 13px/1.5 "Helvetica Nueu", helvetica, arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all ease-in-out .25s;
+    -moz-transition: all ease-in-out .25s;
+}
+
+    a:hover {
+        color: #000 !important;
+        -webkit-transition: all ease-in-out .25s;
+        -moz-transition: all ease-in-out .25s;
+    }
+
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    font-size: 0;
+}
+
+#container {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+#header {
+    margin: 0 15px;
+    position: relative;
+}
+
+#roof {
+    height: 232px;
+    width: 242px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 214px;
+    background: url(../Images/rooftop.png) no-repeat;
+    z-index: 10;
+}
+
+#rotatingImage, #gallery {
+    width: 664px;
+    height: 343px;
+    /*background: url(../Images/gallery1.jpg) no-repeat;*/
+    margin: 0 0 0 0;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+#gallery {
+    z-index: 5;
+}
+#rotatingImage {
+    z-index: 3;
+}
+
+
+.catalogRotator .rrRelativeWrapper {
+    padding-left: 75px;
+}
+
+#youth-programs #gallery {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/gallery2.jpg) no-repeat;
+}
+
+#search {
+    height: 100px;
+    width: 180px;
+    background: url(../Images/search_bg.png) no-repeat;
+    margin-left: -5px;
+}
+
+#searchform {
+    padding: 25px 0 0 0;
+}
+
+#search input {
+    background: #414141;
+    border: 1px solid #414141;
+    color: #999;
+    border-radius: 3px;
+    padding: 4px;
+    width: 171px;
+}
+
+    #search input#go {
+        border: 1px solid #c3c5be;
+        width: 40px;
+        background: transparent;
+        margin-left: 2px;
+        font-weight: bold;
+        -webkit-transition: all ease-in-out .25s;
+        -moz-transition: all ease-in-out .25s;
+    }
+
+        #search input#go:hover {
+            background: #fff;
+            cursor: pointer;
+            -webkit-transition: all ease-in-out .25s;
+            -moz-transition: all ease-in-out .25s;
+        }
+
+
+
+
+
+#search {
+}
+
+    #search input[type="text"] {
+        background: url(../Images/search_bg.png) no-repeat 10px 6px #444;
+        border: 0 none;
+        font: bold 12px Arial,Helvetica,Sans-serif;
+        color: #d7d7d7;
+        margin-left: -5px;
+        width: 150px;
+        height: 100px;
+        padding: 6px 15px 6px 35px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+        -webkit-transition: all 0.7s ease 0s;
+        -moz-transition: all 0.7s ease 0s;
+        -o-transition: all 0.7s ease 0s;
+        transition: all 0.7s ease 0s;
+    }
+/*
+        #search input[type="text"]:focus {
+        background: url(http://1.bp.blogspot.com/-XNPyh_l2WB8/TjRXPfrbJVI/AAAAAAAAA3I/R8Mia0bYtME/s1600/search-dark.png) no-repeat 10px 6px #fcfcfc;
+        color: #6a6f75;
+        width: 200px;
+        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+        text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+		*/
+
+
+#intro {
+    position: relative;
+    z-index: 100;
+    background: url(../img/intro_bg.png) 5px 0 no-repeat;
+    color: rgb(68, 15, 15);
+    font: 14px/1.5 "Times New Roman", times, georgia, serif;
+    font-style: italic;
+    padding: 8px 0 0 26px;
+    height: 70px;
+}
+
+h1 {
+    font: 36px/1.25 georgia, times, serif;
+    margin: 0 0 0 0;
+    color: #ED7A2A;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+.orangeboxStyle{
+    /* font: 36px/1.25 georgia, times, serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 0 0 0;
+    color: rgb(235, 51, 220);
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    font-weight: normal;
+    margin-top: 150px;
+}
+
+#intro img {
+    float: left;
+    margin: -12px 0 0 0;
+}
+
+#intro p {
+    float: left;
+    width: 700px;
+    margin-left: 30px;
+}
+
+.img-seal {
+    /*
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+                */
+    margin: -5px 0 0 16px !important;
+    display: inline-block;
+}
+
+
+
+#text-overlay {
+    height: 75px;
+    width: 499px;
+    display: block;
+    background: url(../Images/learning_overlay.png) no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+}
+
+#orangebox {
+    width: 350px;
+    height: 343px;
+    /* background: url(../Images/orange_bg.png) no-repeat; */
+    background: url(../Images/green_bg.png) no-repeat;
+    float: right;
+    background-color: #27c424;
+}
+
+.brand {
+    height: 70px;
+    width: 191px;
+    background: url("../Images/aum_logo_small.png") no-repeat scroll 0 0;
+    display: block;
+    margin: 80px 0 0 80px;
+
+}
+
+#orangebox .center-head {
+    color: #4a4eff;
+    font: 18px/1 "Times New Roman", times, georgia, serif;
+    font-style: italic;
+    text-align: center;
+    margin: 140px 0 0 115px;
+}
+
+    #orangebox .center-head strong {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+#newsletter {
+    background: #fff url(../Images/newsletter_bg.png) 85px 10px no-repeat;
+    position: absolute;
+    right: -6px;
+    bottom: -33px;
+    color: #eb7d24;
+    font-size: 12px;
+    padding: 5px 16px;
+}
+
+    #newsletter p {
+        margin-bottom: 0;
+    }
+
+    #newsletter input {
+        background: #414141;
+        border: 1px solid #414141;
+        color: #999;
+        border-radius: 3px;
+        padding: 2px;
+        width: 100px;
+    }
+
+    #newsletter #submit {
+        border: 1px solid #ccc;
+        background: transparent;
+        width: 50px;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding: 3px;
+        -webkit-transition: all ease-in-out .25s;
+        -moz-transition: all ease-in-out .25s;
+    }
+
+        #newsletter #submit:hover {
+            background: #fff;
+            cursor: pointer;
+            -webkit-transition: all ease-in-out .25s;
+            -moz-transition: all ease-in-out .25s;
+        }
+
+#nav-featured {
+    background: url(../Images/nav_featured_bg.png) top center no-repeat;
+    height: 212px;
+    padding-top: 20px;
+    margin-top: 11px;
+}
+
+.nav {
+    width: 280px;
+    float: right;
+    margin: 0 0 0 15px;
+
+    /* background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); */
+}
+
+    .nav li {
+        list-style: none;
+        -webkit-transition: all ease-in-out .25s;
+        -moz-transition: all ease-in-out .25s;
+        background: url(../Images/nav_rule.png) left bottom no-repeat;
+        height: 19px;
+        margin-bottom: 2px;
+        position: relative;
+        padding-left: 17px;
+    }
+
+        .nav li div {
+            width: 5px;
+            height: 18px;
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            z-index: 200;
+            background-color: #ccc;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        /* Section Colorschemes */
+
+        .nav li:hover div, nav li.current div {
+            width: 17px;
+            background-image: url(../img/nav-arrow.png);
+            transform: rotate(180deg);
+        }
+
+        .nav li.academic-programs div {
+            background-color: #1d5a6d;
+        }
+
+        .nav li.student-resources div {
+            background-color: rgb(233, 131, 101);
+        }
+
+        .nav li.community-resources div {
+            background-color: #5bbe18;
+        }
+
+        .nav li.departments div {
+            background-color: #257fc4;
+        }
+
+        .nav li.about div {
+            background-color: #e62f75;
+        }
+
+        .nav li.contact div {
+            background-color: rgb(201, 128, 33);
+        }
+
+        .nav li.aum div {
+            background-color: rgb(235, 41, 242);
+        }
+
+.eventItem {
+    color: #ed7a2a;
+    float: left;
+}
+
+
+.nav a {
+    display: block;
+    text-align: left;
+    padding-right: 20px;
+    -webkit-transition: all ease-in-out .25s;
+    -moz-transition: all ease-in-out .25s;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav li.current a {
+    /* margin-right: -13px */
+    color: #666;
+}
+
+.nav a:hover {
+    color: #666;
+}
+
+.nav li:hover {
+    -webkit-transition: all ease-in-out .25s;
+    -moz-transition: all ease-in-out .25s;
+}
+
+#featured {
+    float: left;
+    padding: 7px 0 0 25px !important;
+}
+
+#featured_label {
+    float: left;
+}
+
+    #featured_label img {
+        width: 14px;
+        vertical-align: middle;
+        padding-left: 5px;
+    }
+
+    #featured_label h2 {
+        color: #ed7a2a;
+        font: 27px/1 "Times New Roman", times, georgia, serif;
+        font-style: italic;
+        text-align: center;
+        padding: 20px 50px;
+    }
+
+    #featured_label p {
+        text-align: right;
+        margin: 0 50px 0 0;
+        color: #989898;
+        font-size: 16px;
+    }
+
+#scroll h2 {
+    color: #ED7A2A;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    width: 70%;
+    padding-left: 0 !important;
+}
+
+#scroll p, #scroll span {
+    /* font-family: 'Helvetica Nueue', helvetica, arial, sans-serif !important; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px !important;
+    color: #010101 !important;
+    line-height: 1.65 !important;
+}
+
+#scroll a, #scroll a strong {
+    font-size: 13px !important;
+    border: none;
+    color: #EB7D24 !important;
+    font-family: 'Helvetica Nueue', helvetica, arial, sans-serif !important;
+}
+
+#scroll {
+    width: 630px;
+    height: 172px;
+    display: block;
+    background: url(../Images/featured_scroll_bg.png) no-repeat;
+    float: left;
+    padding: 15px 15px 0 25px;
+    margin-top: 15px;
+    position: relative;
+    background-color: rgb(179, 219, 219);
+}
+
+    #scroll ul {
+        height: 148px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        top: 20px;
+        position: absolute;
+    }
+
+    #scroll li {
+        list-style: none;
+    }
+
+    /*#scroll li.class {
+			background: url(../Images/books_orange.png) 0 4px no-repeat;
+			background-size: 20px;
+			padding-left: 30px;
+			}
+
+		#scroll li.event {
+			background: url(../Images/calendar_orange.png) 0 4px no-repeat;
+			background-size: 20px;
+			padding-left: 30px;
+			}*/
+
+    #scroll h3 {
+        color: #eb7d24;
+        font-size: 15px;
+        font-weight: bold;
+        padding-left: 10px;
+        float: left;
+    }
+
+    #scroll p {
+        font-size: 13px;
+        color: #808080;
+        line-height: 1.25;
+        padding-left: 30px;
+        clear: left;
+    }
+
+.icon {
+    height: 20px;
+    width: 14px;
+    vertical-align: middle;
+    float: left;
+    background: #ED7A2A;
+}
+
+.events {
+    width: 99%;
+}
+
+
+
+#google-cse-searchbox-form #edit-sa {
+    display: none;
+}
+
+.right-menu {
+    width: 999px !important;
+    margin: 0 0 0 15px;
+    border-top: 1px solid #eb7d24;
+}
+
+
+.grid-wrapper {
+    width: 1020px;
+    margin: 0 0 0 15px;
+    border-top: 1px solid #eb7d24;
+}
+
+.single-box {
+    width: 960px;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(179, 219, 219);
+    border-style: solid;
+    border-color: #054849;
+    border-radius: 50px;
+}
+
+    .single-box h2 {
+        color: #24ebc0;
+        font-weight: normal;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+.grid-container {
+    padding: 0 30px;
+    min-height: 165px;
+    /* background: url(../img/grid_bg.png) repeat-y; */
+    background-color: rgb(179, 219, 219);
+    border-style: solid;
+    border-color: #054849;
+    border-radius: 50px;
+}
+
+/*.grid-container {
+	    min-height:175px;
+     background: url(../Images/grid_bg.png) repeat-y;
+	    width: 1000px;
+	}*/
+
+.grid-item1 {
+    padding: 20px 25px 20px 50px;
+}
+
+.grid-item2 {
+    padding: 20px 25px 20px 30px;
+}
+
+.grid-item3 {
+    padding: 20px 25px 20px 10px;
+}
+
+.grid-item1a {
+    padding: 20px 25px 20px 32px;
+    background: url(../Images/grid_rule.png) no-repeat top right 6px;
+}
+
+.grid-item2a {
+    padding: 20px 25px 20px 23px;
+    background: url(../Images/grid_rule.png) no-repeat top right 6px;
+}
+
+.grid-item3a {
+    padding: 20px 25px 20px 17px;
+    background: url(../Images/grid_rule.png) no-repeat top left 0px;
+}
+
+.grid-item {
+    width: 283px;
+    height: 210px;
+    /* float: left; */
+    display: table-cell;
+}
+
+
+
+
+    .grid-item h2 {
+        color: #eb7d24;
+        font-weight: normal;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .grid-item p {
+        color: #000;
+        font-size: 10px;
+    }
+
+    .grid-item .gallery a {
+        display: inline-block;
+        padding: 7px;
+    }
+
+    .grid-item li {
+        list-style: none;
+        font-size: 10px;
+    }
+
+img.right {
+    float: right;
+    padding-left: 10px;
+}
+
+img.center {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+a img {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    -webkit-transition: opacity ease-in-out .25s;
+}
+
+    a img:hover {
+        -webkit-opacity: .75;
+        -moz-opacity: .75;
+        opacity: .75;
+        -webkit-transition: opacity ease-in-out .25s;
+    }
+
+.row {
+    clear: both;
+}
+
+#content {
+    margin: 0 15px;
+    padding: 0 50px;
+    font-size: 14px;
+    color: #414141;
+    border-top: 2px solid #f8bc1c;
+}
+
+    #content h2 {
+        color: #5a5a5a;
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: .25em;
+    }
+
+.main-content {
+    float: left;
+    width: 670px;
+    margin-top: 40px;
+}
+
+#content h1 {
+    margin-bottom: 0;
+}
+
+#content .interior h1 {
+    margin-top: .75em;
+}
+
+#content .breadcrumbs {
+    text-transform: uppercase;
+    color: #a6a6a6;
+    letter-spacing: 1px;
+    font-size: 9px;
+    font-family: verdana, arial, sans-serif;
+    margin-bottom: 2em;
+}
+
+    #content .breadcrumbs a {
+        color: #727272;
+    }
+
+.column {
+    width: 210px;
+    float: left;
+    font-size: 13px;
+    margin: 20px 20px 20px 0;
+}
+
+    .column:last-child {
+        margin-right: 0;
+    }
+
+    .column h3 {
+        font-size: 16px;
+        border-bottom: 1px solid #d3d3d3;
+        margin-bottom: 10px;
+    }
+
+
+.aside {
+    width: 170px;
+    float: right;
+    min-height: 350px;
+    background: url(../Images/aside_grad.png) no-repeat;
+    margin: 40px 0 25px 0;
+    padding: 0 20px 0 50px;
+}
+
+    .aside li {
+        list-style: none;
+        margin-bottom: .25em;
+    }
+
+    .aside a {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .aside span {
+        white-space: normal;
+        margin-bottom: 0.3em;
+    }
+
+
+
+
+body .aside a.current {
+    color: #9b9b9b;
+    pointer-events: none;
+    cursor: default;
+}
+
+footer {
+    border-top: 1px solid #eb7d24;
+    margin: 0 16px;
+    padding-left: 40px;
+    padding-top: 20px;
+    margin-top: -3px;
+    background: #fff;
+}
+
+.interior footer {
+    margin-top: -29px;
+}
+
+footer nav {
+    width: 51%;
+    padding-bottom: 10px;
+}
+
+#nav-ul {
+    border-left: solid 1px #f8d3b4;
+
+}
+
+footer nav ul {
+    width: 160px;
+    float: left;
+    border-left: 1px solid #F8D3B4;
+    padding-left: 14px;
+    height: 195px;
+    list-style-type: none;
+}
+
+footer nav li {
+    background: none;
+    font-size: 10px;
+    line-height: 1.25;
+    margin-bottom: 1em;
+    height: auto;
+}
+
+footer nav ul.secondary1 {
+    width: 130px;
+}
+
+footer nav ul.secondary2 {
+    width: 155px;
+}
+
+    footer nav ul.secondary1 li a, footer nav ul.secondary2 li a {
+        font-weight: normal;
+    }
+
+footer nav li a {
+    text-align: left;
+    font-weight: bold;
+    color: #eb7d24;
+    font-family: Verdana;
+}
+/*
+#footer {
+	border-top: 1px solid #eb7d24;
+	margin: 0 15px;
+	padding-left: 40px;
+	padding-top: 20px;
+	margin-top: -3px;
+	background: #fff;
+	}
+
+	.interior footer {
+		margin-top: -29px;
+		}
+
+	#footer .nav {
+		width: 47%;
+		}
+
+	#footer .nav ul {
+		width: 175px;
+		float: left;
+		}
+
+	#footer .nav li {
+		background: none;
+		font-size: 10px;
+		line-height: 1.25;
+		margin-bottom: 1em;
+		height: auto;
+		}
+
+	#footer .nav ul.secondary {
+		width: 105px;
+		}
+
+	#footer .nav ul.secondary li a {
+		font-weight: normal;
+		}
+
+	#footer .nav li a {
+		text-align: left;
+		font-weight: bold;
+		color: #eb7d24;
+		}
+
+	#address {
+		display: block;
+		float: left;
+		color: #999999;
+		font-size: 11px;
+		background: url(../Images/footer_vertical_rule.png) no-repeat;
+		padding-left: 30px;
+        width: 450px;
+		}*/
+
+address {
+    display: block;
+    float: left;
+    color: #999999;
+    font-size: 11px;
+    background: url(../img/footer_vertical_rule.png) no-repeat;
+    padding-left: 30px;
+}
+
+#social-copy {
+    float: right;
+    font-size: 10px;
+    color: #9b9b9b;
+}
+
+    #social-copy p {
+        text-align: right;
+        margin-right: 50px;
+    }
+
+#social {
+    font-size: 15px;
+    float: right;
+}
+
+    #social a {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: text-top;
+        -webkit-opacity: 1;
+        -moz-opacity: 1;
+        opacity: 1;
+        margin-left: 5px;
+    }
+
+        #social a:hover {
+            -webkit-opacity: .75;
+            -moz-opacity: .75;
+            opacity: .75;
+        }
+
+    #social .facebook {
+        background: url(../Images/social_facebook.png) no-repeat;
+        background-size: 100%;
+    }
+
+    #social .twitter {
+        background: url(../Images/social_twitter.png) no-repeat;
+        background-size: 100%;
+    }
+
+    #social .wordpress {
+        background: url(../Images/social_wordpress.png) no-repeat;
+        background-size: 100%;
+    }
+
+    #social .youtube {
+        background: url(../Images/social_youtube.png) no-repeat;
+        background-size: 100%;
+    }
+
+    #social .instagram {
+        background: url(../Images/social_instagram.png) no-repeat;
+        background-size: 100%;
+    }
+
+.main-link {
+    height: 32px;
+    display: inline-block;
+    margin-right: 20px;
+    padding-left: 25px;
+    padding-top: 17px;
+    background: url(../Images/small_building.png) left center no-repeat;
+    margin-top: -20px;
+}
+
+.copy {
+    margin-top: -15px;
+}
+
+
+
+
+/* Personal Development */
+.personal-development #featured_label h2,
+.personal-development #featured a,
+.personal-development .grid-item a,
+.personal-development #content .grid-item h2,
+.personal-development h1,
+.personal-development .aside a,
+.personal-development .main-content a {
+    color: #D34843;
+}
+
+.personal-development #grid-container {
+    border-top: 1px solid #D34843;
+}
+
+.personal-development #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/intro_bg_personal_development.png) 5px 0 no-repeat;
+}
+
+.personal-development a:hover {
+    color: #000;
+}
+
+.personal-development footer {
+    border-top: 1px solid #D34843;
+}
+
+.personal-development .icon {
+    background: #D34843;
+}
+
+
+/* Professional Development */
+.professional-development #featured_label h2,
+.professional-development #featured a,
+.professional-development .grid-item a,
+.professional-development #content .grid-item h2,
+.professional-development h1,
+.professional-development aside a,
+.professional-development .main-content a {
+    color: #126162;
+}
+
+.professional-development #grid-container {
+    border-top: 1px solid #126162;
+}
+
+.professional-development #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/intro_bg_professional_development.png) 5px 0 no-repeat;
+}
+
+.professional-development a:hover {
+    color: #000;
+}
+
+.professional-development footer {
+    border-top: 1px solid #126162;
+}
+
+.professional-development .icon {
+    background: #126162;
+}
+
+
+/* Professional Development */
+.english-as-a-second-language #featured_label h2,
+.english-as-a-second-language #featured a,
+.english-as-a-second-language .grid-item a,
+.english-as-a-second-language #content .grid-item h2,
+.english-as-a-second-language h1,
+.english-as-a-second-language aside a,
+.english-as-a-second-language .main-content a {
+    color: #9DA665;
+}
+
+.english-as-a-second-language #grid-container {
+    border-top: 1px solid #9DA665;
+}
+
+.english-as-a-second-language #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/intro_bg_english_as_a_second_language.png) 5px 0 no-repeat;
+}
+
+.english-as-a-second-language a:hover {
+    color: #000;
+}
+
+.english-as-a-second-language footer {
+    border-top: 1px solid #9DA665;
+}
+
+.english-as-a-second-language .icon {
+    background: #9DA665;
+}
+
+
+/* Youth Programs */
+.youth-programs #featured_label h2,
+.youth-programs #featured a,
+.youth-programs .grid-item a,
+.youth-programs #content .grid-item h2,
+.youth-programs h1,
+.youth-programs aside a,
+.youth-programs .main-content a {
+    color: #CA8F00;
+}
+
+.youth-programs #grid-container {
+    border-top: 1px solid #f8b911;
+}
+
+.youth-programs #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/intro_bg_youth_programs.png) 5px 0 no-repeat;
+}
+
+.youth-programs a:hover {
+    color: #000;
+}
+
+.youth-programs footer {
+    border-top: 1px solid #f8b911;
+}
+
+.youth-programs .icon {
+    background: #CA8F00;
+}
+
+.youth-programs.interior #content {
+    border-top: 2px solid #f8bc1c;
+}
+
+
+/* Online Classes */
+.online-classes #featured_label h2,
+.online-classes #featured a,
+.online-classes .grid-item a,
+.online-classes #content .grid-item h2,
+.online-classes h1,
+.online-classes aside a,
+.online-classes .main-content a {
+    color: #6E39A9;
+}
+
+.online-classes #grid-container {
+    border-top: 1px solid #6E39A9;
+}
+
+.online-classes #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/intro_bg_online_classes.png) 5px 0 no-repeat;
+}
+
+.online-classes a:hover {
+    color: #000;
+}
+
+.online-classes footer {
+    border-top: 1px solid #6E39A9;
+}
+
+.online-classes .icon {
+    background: #6E39A9;
+}
+
+
+/* Computer Training */
+.computer-training #featured_label h2,
+.computer-training #featured a,
+.computer-training .grid-item a,
+.computer-training #content .grid-item h2,
+.computer-training h1,
+.computer-training aside a,
+.computer-training .main-content a {
+    color: #21990E;
+}
+
+.computer-training #grid-container {
+    border-top: 1px solid #21990E;
+}
+
+.computer-training #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/intro_bg_computer_training.png) 5px 0 no-repeat;
+}
+
+.computer-training a:hover {
+    color: #000;
+}
+
+.computer-training footer {
+    border-top: 1px solid #21990E;
+}
+
+.computer-training .icon {
+    background: #21990E;
+}
+
+
+/* Conferences & Events */
+.conferences-events #featured_label h2,
+.conferences-events #featured a,
+.conferences-events .grid-item a,
+.conferences-events #content .grid-item h2,
+.conferences-events h1,
+.conferences-events aside a,
+.conferences-events .main-content a {
+    color: #68a2a5;
+}
+
+.conferences-events #grid-container {
+    border-top: 1px solid #68a2a5;
+}
+
+.conferences-events #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/intro_bg_conferences_events.png) 5px 0 no-repeat;
+}
+
+.conferences-events a:hover {
+    color: #000;
+}
+
+.conferences-events footer {
+    border-top: 1px solid #68a2a5;
+}
+
+.conferences-events .icon {
+    background: #68a2a5;
+}
+
+
+/* Alabama Crime Prevention */
+.alabama-crime-prevention #featured_label h2,
+.alabama-crime-prevention #featured a,
+.alabama-crime-prevention .grid-item a,
+.alabama-crime-prevention #content .grid-item h2,
+.alabama-crime-prevention h1,
+.alabama-crime-prevention aside a,
+.alabama-crime-prevention .main-content a {
+    color: #255989;
+}
+
+.alabama-crime-prevention #grid-container {
+    border-top: 1px solid #255989;
+}
+
+.alabama-crime-prevention #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/intro_bg_alabama_crime_prevention.png) 5px 0 no-repeat;
+}
+
+.alabama-crime-prevention a:hover {
+    color: #000;
+}
+
+.alabama-crime-prevention footer {
+    border-top: 1px solid #255989;
+}
+
+.alabama-crime-prevention .icon {
+    background: #255989;
+}
+
+
+/* Contact Us */
+
+
+.contact-us #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/Images/intro_bg_contact_us.png) 5px 0 no-repeat;
+}
+
+.contact-us #content .grid-item h2 {
+    color: #EB7D24;
+}
+
+
+/* Section Colorschemes */
+
+/* Academic Programs */
+.academic-programs #featured_label h2,
+.academic-programs .grid-item a,
+.academic-programs #content .grid-item h2,
+.academic-programs h1,
+.academic-programs aside a,
+.academic-programs .main-content a {
+    color: #53b3a2;
+}
+
+.academic-programs #grid-container {
+    border-top: 1px solid #53b3a2;
+}
+
+.academic-programs #intro {
+    background: url(../img/intro_bg_academic_programs.png) 5px 0 no-repeat;
+}
+
+.academic-programs a:hover {
+    color: #000;
+}
+
+.academic-programs footer {
+    border-top: 1px solid #53b3a2;
+}
+
+.academic-programs .icon {
+    background: #53b3a2;
+}
+
+.academic-programs.interior #content h2 {
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #eb7d24;
+    font-weight: normal;
+}
+
+
+/* Professional Development */
+.professional-development #featured_label h2,
+.professional-development .grid-item a,
+.professional-development #content .grid-item h2,
+.professional-development h1,
+.professional-development aside a,
+.professional-development .main-content a {
+    color: #126162;
+}
+
+.professional-development #grid-container {
+    border-top: 1px solid #126162;
+}
+
+.professional-development #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/img/intro_bg_professional_development.png) 5px 0 no-repeat;
+}
+
+.professional-development a:hover {
+    color: #000;
+}
+
+.professional-development footer {
+    border-top: 1px solid #126162;
+}
+
+.professional-development .icon {
+    background: #126162;
+}
+
+.professional-development.interior #content h2 {
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #eb7d24;
+    font-weight: normal;
+}
+
+
+/* Student Resources */
+.student-resources #featured_label h2,
+.student-resources .grid-item a,
+.student-resources #content .grid-item h2,
+.student-resources h1,
+.student-resources aside a,
+.student-resources .main-content a {
+    color: #126162;
+}
+
+.student-resources #grid-container {
+    border-top: 1px solid #126162;
+}
+
+.student-resources #intro {
+    background: url(../img/intro_bg_student_resources.png) 5px 0 no-repeat;
+}
+
+.student-resources a:hover {
+    color: #000;
+}
+
+.student-resources footer {
+    border-top: 1px solid #126162;
+}
+
+.student-resources .icon {
+    background: #126162;
+}
+
+.student-resources.interior #content h2 {
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #eb7d24;
+    font-weight: normal;
+}
+
+
+/* Academic Departments */
+.academic-departments #featured_label h2,
+.academic-departments .grid-item a,
+.academic-departments #content .grid-item h2,
+.academic-departments h1,
+.academic-departments aside a,
+.academic-departments .main-content a {
+    color: #9da665;
+}
+
+.academic-departments #grid-container {
+    border-top: 1px solid #f8b911;
+}
+
+.academic-departments #intro {
+    background: url(../img/intro_bg_academic_departments.png) 5px 0 no-repeat;
+}
+
+.academic-departments a:hover {
+    color: #000;
+}
+
+.academic-departments footer {
+    border-top: 1px solid #9da665;
+}
+
+.academic-departments .icon {
+    background: #9da665;
+}
+
+.academic-departments.interior #content {
+    border-top: 2px solid #9da665;
+}
+
+    .academic-departments.interior #content h2 {
+        font-size: 18px;
+        line-height: 1.5em;
+        color: #eb7d24;
+        font-weight: normal;
+    }
+
+
+/* Faculty and Staff Directory */
+.early-childhood-center #featured_label h2,
+.early-childhood-center .grid-item a,
+.early-childhood-center #content .grid-item h2,
+.early-childhood-center h1,
+.early-childhood-center aside a,
+.early-childhood-center .main-content a {
+    color: #F8B911;
+}
+
+.early-childhood-center #grid-container {
+    border-top: 1px solid #F8B911;
+}
+
+.early-childhood-center #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/img/intro_bg_faculty_and_staff_directory.png) 5px 0 no-repeat;
+}
+
+.early-childhood-center a:hover {
+    color: #000;
+}
+
+.early-childhood-center footer {
+    border-top: 1px solid #F8B911;
+}
+
+.early-childhood-center .icon {
+    background: #F8B911;
+}
+
+.early-childhood-center.interior #content h2 {
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #eb7d24;
+    font-weight: normal;
+}
+
+
+/* About */
+/*.about #featured_label h2,
+.about .grid-item ,
+.about #content .grid-item h2,
+.about h1,
+.about aside ,
+.about .main-content  {
+	color: #6e39a9;
+	}*/
+
+
+
+.about #grid-container {
+    border-top: 1px solid #6e39a9;
+}
+
+.about #intro {
+    background: url(../img/intro_bg_about.png) 5px 0 no-repeat;
+}
+
+.about a:hover {
+    color: #000;
+}
+
+.about footer {
+    border-top: 1px solid #6e39a9;
+}
+
+.about .icon {
+    background: #6e39a9;
+}
+
+.about.interior #content h2 {
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #eb7d24;
+    font-weight: normal;
+}
+
+
+/* Contact */
+.contact #featured_label h2,
+.contact .grid-item a,
+.contact #content .grid-item h2,
+.contact h1,
+.contact aside a,
+.contact .main-content a {
+    color: #21990E;
+}
+
+.contact #grid-container {
+    border-top: 1px solid #21990E;
+}
+
+.contact #intro {
+    background: url(http://sciences.aum.edu/App_Themes/Main/img/intro_bg_conferences_events.png) 5px 0 no-repeat;
+}
+
+.contact a:hover {
+    color: #000;
+}
+
+.contact footer {
+    border-top: 1px solid #21990E;
+}
+
+.contact .icon {
+    background: #21990E;
+}
+
+.contact.interior #content h2 {
+    color: #eb7d24;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+
+
+/* For the "inset" look only */
+html {
+    overflow: auto;
+}
+
+/*
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+*/
+
+/* Let's get this party started */
+#scroll ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.25);
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.15);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
+}
+
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(255,0,0,0.25);
+    }
+
+input.placeholder_text,
+textarea.placeholder_text {
+    color: #777;
+}
+
+::-webkit-input-placeholder {
+    color: #777;
+}
+
+.gsc-control-cse {
+    background: transparent !important;
+    border-color: transparent !important;
+}
+
+.cse input.gsc-search-button, input.gsc-search-button {
+    background: #414141 !important;
+    border: none !important;
+    background-image: none !important;
+}
+
+.search-divider {
+    background: url("http://sciences.aum.edu/App_Themes/Main/Images/SearchBoxDivider.png") no-repeat scroll center;
+    background-position: 128px 0;
+}
+
+.gsc-clear-button {
+    background-image: none !important;
+}
+
+table.gsc.search {
+    margin: 25px 0 0 -5px !important;
+}
+
+.gsc-search-box {
+    margin: 25px 0 0 -5px !important;
+}
+
+input.gsc-input {
+    background-color: #414141 !important;
+    color: #ffffff !important;
+}
+
+.gsc-input-box {
+    background-color: #414141 !important;
+    border-color: #414141 !important;
+}
+
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+    padding-right: 0 !important;
+}
+
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+    padding: 6px 15px !important;
+}
+
+/*#GridContainer_T1112A4E1002_Col01 {background: url(../img/grid_rule.png) no-repeat;
+background-position-y: top;
+background-position-x: 30%;
+}
+#GridContainer_C004_Col00 {background: url(../img/grid_rule.png) no-repeat;
+background-position-y: top;
+background-position-x: 70%;
+
+}
+#GridContainer_T1112A4E1002_Col00 {background: url(../img/grid_rule.png) no-repeat;
+background-position-y: top;
+background-position-x: 70%;
+}
+#GridContainer_C004_Col01 {background: url(../img/grid_rule.png) no-repeat;
+background-position-y: top;
+background-position-x: 30%;
+}*/
+
+.introBlockStyle{
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+#GridContainer_T1112A4E1002_Col02, #GridContainer_C004_Col02 {
+    background: url(../img/grid_rule.png) no-repeat;
+    background-position-y: top;
+}
+
+
+.sfContentBlock{
+    /* border-style: solid;
+    border-color: #054849;
+    border-radius: 50px; */
+    text-align: left;
+}
+
+.sfContentBlock.grid-item.g1, .sfContentBlock.grid-item.g4, .sfContentBlock.grid-item.g7 {
+    padding: 20px 9px 20px 55px;
+}
+
+.sfContentBlock.grid-item.g2, .sfContentBlock.grid-item.g5, .sfContentBlock.grid-item.g8 {
+    padding: 20px 0 20px 25px;
+}
+
+.sfContentBlock.grid-item.g3, .sfContentBlock.grid-item.g6, .sfContentBlock.grid-item.g9 {
+    padding: 20px 16px 20px 0;
+}
+
+.sfContentBlock.grid-item.g4, .sfContentBlock.grid-item.g5, .sfContentBlock.grid-item.g7, .sfContentBlock.grid-item.g8 {
+    background: url("../Images/grid_rule.png") no-repeat scroll right -2px top rgba(0, 0, 0, 0);
+    background-position-y: top;
+}
+
+.sfContentBlock.grid-item.g6, .sfContentBlock.grid-item.g9 {
+    background: url("../Images/grid_rule.png") no-repeat scroll right 10px top rgba(0, 0, 0, 0);
+    background-position-y: top;
+    padding-left: 8px;
+}
+
+.sfSubContentBlock{
+    text-align: center;
+    font-family: Verdana;
+    size: 14px;
+}
+
+.sfSubContent{
+    text-align: justify;
+    font-family: Verdana;
+}
+
+.sfScrollStyle{
+    background-color:rgb(179, 219, 219);
+}
+
+img.right {
+    float: right;
+    padding: 30px 0 0 20px;
+}
+
+img.right2 {
+    float: right;
+    padding: 15px 18px 0 12px;
+}
+
+.left {
+    float: left;
+    padding: 3px 10px 0 0;
+}
+
+img.center {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.orange-button {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+    .orange-button a {
+        color: white;
+        text-align: center;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        font-size: 15px;
+        width: 130px;
+        display: block;
+        padding: .35em .2em;
+        background: #f29902; /* Old browsers */
+        background: -moz-linear-gradient(top, #f29902 0%, #e76a00 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f29902), color-stop(100%,#e76a00)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #f29902 0%,#e76a00 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #f29902 0%,#e76a00 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #f29902 0%,#e76a00 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #f29902 0%,#e76a00 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f29902', endColorstr='#e76a00',GradientType=0 ); /* IE6-9 */
+    }
+
+        .orange-button a:hover {
+            color: #010101;
+        }
+
+#featured_label {
+    padding: 7px 0 0 35px;
+}
+
+h3 {
+    display: block;
+    width: 70%;
+    padding-left: 0 !important;
+}
+
+.interior_subnav {
+    width: 170px;
+    float: left;
+    min-height: 350px;
+    background: url(../../../img/aside_grad.png) no-repeat;
+    margin: 40px 0 25px 0;
+    padding-left: 10px;
+}
+
+    .interior_subnav li {
+        background: url(../../../img/interior_subnav_line.png) no-repeat 90% 100%;
+        text-align: right;
+        background-position: 100% 100%;
+        width: 265px;
+        margin-left: -16px;
+        padding: 3px 0 2px 0;
+    }
+
+        .interior_subnav li a {
+            color: black;
+            padding-right: 60px;
+            font-size: 13px;
+        }
+
+#mobileheader {
+    display: none;
+}

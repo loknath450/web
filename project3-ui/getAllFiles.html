@@ -1,0 +1,46 @@
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Today's Date</title>
+    <script>
+        let d = new Date();
+        var files;
+        alert("Today's date is " + d);
+        var xhr = new XMLHttpRequest();
+xhr.open('GET', "http://localhost:8081/getAllFiles", true);
+xhr.send();
+ 
+xhr.onreadystatechange = processRequest;
+ 
+function processRequest(e) {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        var response = JSON.parse(xhr.responseText);
+        files=response;
+        
+        var output= document.getElementById('output').innerHTML=response;
+        
+        console.log(response);
+        
+    }
+
+}
+ 
+        
+    </script>
+</head>
+
+<body>
+<div id='output'>
+
+    <!-- <table class='table-stripped'>
+
+        <tbody id='data'></tbody>
+    </table> -->
+</div>
+</body>
+
+
+
+</html>

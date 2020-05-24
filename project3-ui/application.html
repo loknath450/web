@@ -1,0 +1,455 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1">
+    <title>
+        Advance Record Management
+    </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37112227-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-37112227-1');
+    </script>
+    <script type="text/javascript">
+        console.log('js loaded');
+        let resumeEvent;
+
+        function inputChanged(e) {
+            console.log('File added');
+            let files = [];
+            files = e.target.files || e.dataTransfer.files;
+            if (files.length > 0) {
+                let file = files[0];
+                let fileType = file["type"];
+                console.log('fileType', fileType);
+                if (fileType != 'application/pdf') {
+                    alert("Only PDF is allowed");
+                } else {
+                    resumeEvent = e;
+                }
+
+            }
+        }
+
+        function validateAndSubmit() {
+            if (document.getElementById('firstname').value == "") {
+                alert("Please provide your First Name!");
+                document.getElementById('firstname').focus();
+                return false;
+            }
+
+
+            if (document.getElementById('lastname').value == "") {
+                alert("Please provide your Last Name!");
+                document.getElementById('lastname').focus();
+                return false;
+            }
+
+            var length = document.getElementById('suid').value.length;
+            console.log(length);
+
+            if (document.getElementById('suid').value == "" ||
+                document.getElementById('suid').value.length != 6) {
+                alert("Please provide a student id number");
+                document.getElementById('suid').focus();
+                return false;
+            }
+
+            var email = document.getElementById('emailid').value;
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+            if (email == "" || atpos < 1 || (dotpos - atpos < 2)) {
+                alert("Please enter correct email ID")
+                document.getElementById('emailid').focus();
+                return false;
+            }
+
+            let formData = new FormData();
+
+            if (resumeEvent) {
+                console.log('resumeEvent', resumeEvent);
+                let files = [];
+                files = resumeEvent.target.files || resumeEvent.dataTransfer.files;
+                console.log(files[0]);
+                if (files.length > 0) {
+                    let file = files[0];
+                    let fileType = file["type"];
+                    console.log('fileType', fileType);
+                    if (fileType == 'application/pdf') {
+
+
+                        formData.append('resume', file, file.name);
+                        // formData.processData = false;
+                        // formData.contentType = false;
+                        console.log('formData', formData);
+                    } else {
+                        alert("Only PDF is allowed");
+                    }
+                }
+            } else {
+                alert("Please upload a resume");
+                return false;
+            }
+
+            var firstName = document.getElementById('firstname').value;
+            var lastName = document.getElementById('lastname').value;
+            var suid = document.getElementById('suid').value;
+
+            let json = JSON.stringify({
+                firstname: firstName,
+                lastname: lastName,
+                suid: suid,
+                email: email
+            });
+
+            let hostname = window.location.hostname;
+            var createApiPath = 'http://' + hostname + '/createApplication';
+            if (hostname.includes('localhost')) {
+                createApiPath = 'http://' + hostname + ':8081/createApplication';
+            }
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", createApiPath);
+
+            // track completion: both successful or not
+            xhr.onreadystatechange = function () {
+                console.log('xhr.readyState', xhr.readyState);
+                if (xhr.readyState == XMLHttpRequest.DONE) {
+                    console.log("success");
+                    // window.location.href = '/application.html';
+                    if (hostname.includes('localhost')) {
+                        location.replace('http://' + hostname + ':8081/application.html')
+                    } else {
+                        location.replace('http://' + hostname + '/application.html')
+                    }
+
+                    // location.replace("http://aum-mathsandsciences.us-east-1.elasticbeanstalk.com/application.html")
+                    // return true;
+                } else {
+                    console.log("error " + this.status);
+                }
+            };
+
+            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            xhr.send(json);
+
+
+
+            let uploadApiPath = 'http://' + hostname + '/uploadResume';
+            if (hostname.includes('localhost')) {
+                uploadApiPath = 'http://' + hostname + ':8081/uploadResume';
+            }                                  
+
+            let xhrUpload = new XMLHttpRequest();
+            xhrUpload.open("POST", uploadApiPath);
+
+            // track completion: both successful or not
+            xhrUpload.onreadystatechange = function () {
+                console.log('xhr.readyState', xhrUpload.readyState);
+                if (xhrUpload.readyState == XMLHttpRequest.DONE) {
+                    var start = new Date().getTime();
+                    var end = start;
+                    while (end < start + 3000) {
+                        end = new Date().getTime();
+                    }
+                    console.log("success");
+
+                } else {
+                    console.log("error " + this.status);
+                }
+            };
+
+            xhrUpload.send(formData);
+        }
+    </script>
+
+    <script>
+        (function () {
+            var cx = '013655452824391202783:mblfr2j6vei';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="App_Themes/Main/__MACOSX/css/._ie.css" type="text/css" rel="stylesheet" />
+    <link href="App_Themes/Main/__MACOSX/css/._master.css" type="text/css" rel="stylesheet" />
+    <link href="App_Themes/Main/__MACOSX/css/._reset.css" type="text/css" rel="stylesheet" />
+    <link href="App_Themes/Main/__MACOSX/css/._styles.css" type="text/css" rel="stylesheet" />
+    <link href="App_Themes/Main/Global/ie.css" type="text/css" rel="stylesheet" />
+    <link href="App_Themes/Main/Global/master.css" type="text/css" rel="stylesheet" />
+    <link href="App_Themes/Main/Global/reset.css" type="text/css" rel="stylesheet" />
+    <link href="App_Themes/Main/Global/styles.css" type="text/css" rel="stylesheet" />
+    <meta name="Generator" content="Sitefinity 7.0.5100.0 PE" />
+    <link rel="canonical" href="application.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript">
+        (function () { var _rdDeviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width; var _rdDeviceHeight = (window.innerHeight > 0) ? window.innerHeight : screen.height; var _rdOrientation = (window.width > window.height) ? 'landscape' : 'portrait'; })();
+    </script>
+    <link
+        href="./Telerik.Web.UI.WebResource.axd%3Fcompress=0&amp;_TSM_CombinedScripts_=%3B%3BTelerik.Sitefinity.Resources,+Version=7.0.5100.0,+Culture=neutral,+PublicKeyToken=null:en:a6635f48-e22f-44c2-8ae2-67269b80c83c:7a90d6a.css"
+        type="text/css" rel="stylesheet" />
+
+ <style type="text/css">
+    body
+    {
+        background-color: #eee;
+    }
+    .nav-bar
+    {
+        width: 100%;
+        height: 100px;
+        margin-top: -15px;
+        background-color: #505763;
+        /*background-color: #29303b;*/
+    }
+    .navchild
+    {
+        width: 50%;
+        height: all;
+        float: left;
+    }
+    button
+    {
+        width: 25%;
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        background-color: #505763;
+        border-color:white;
+        padding: 12px 12px 12px 12px;
+        border-radius: 15px;
+        font-size: 20px;
+        margin: 30px 25px 15px 400px;
+    }
+    .imglogo {
+      width: auto;
+      height: auto;
+      margin-left: 115px;
+      margin-top: 10px: 
+    }
+    .imgdiv
+    {
+        margin:17px;
+        padding: 5px;
+    }
+    
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password], input[type=file] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      display: inline-block;
+      border: none;
+      background: #ddd;
+      /*background: #f1f1f1;*/
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+      /*background-color: #ddd;*/
+      background-color: #d1d1d1;
+      outline: none;
+    }
+
+    .registerbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 16px;
+      margin: 4px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+</style>
+</head>
+
+<body>
+    <!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: DBM_AuburnUniversityMontgomeryAUM_07212017_SiteRMSG
+URL of the webpage where the tag is expected to be placed: http://www.advancenet.com
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 07/21/2017
+-->
+    <script type="text/javascript">
+        var axel = Math.random() + "";
+        var a = axel * 10000000000000;
+        document.write('<iframe src="https://6856376.fls.doubleclick.net/activityi;src=6856376;type=invmedia;cat=vjglvjfe;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    </script>
+    <noscript>
+        <iframe
+            src="https://6856376.fls.doubleclick.net/activityi;src=6856376;type=invmedia;cat=vjglvjfe;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?"
+            width="1" height="1" frameborder="0" style="display:none"></iframe>
+    </noscript>
+    <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+    <!--     -->
+    <!--    <img src="http://bcp.crwdcntrl.net/5/c=931/b=42596444" width="1" height="1"/>-->
+    <!--    &lt;!&ndash; Segment Pixel - AL - Auburn University Montgomery AUM - Site - DO NOT MODIFY &ndash;&gt;-->
+    <!--<img src="http://ib.adnxs.com/seg?add=1437167&t=2" width="1" height="1" />-->
+    <!--&lt;!&ndash; End of Segment Pixel &ndash;&gt;-->
+    <div>
+        <input type="hidden" name="ctl09_TSSM" id="ctl09_TSSM" value="" />
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+            value="/wEPDwUKMTQ1NzcxOTU2OWRkaMuhDLCzow775iuIBv8ZhRV48hxr44SNvuLhk+qqCxA=" />
+
+
+        <script
+            src="ScriptResource.axd%3Fd=LyS3ifTO4_H7XT0oIarnARjHaAb2JGDc3nvuM0op8MRwgN-aaLuMJykUa0O26IRZNwFA06eph5RC1EuZ9Ca0c_Ocph4n8wZE1SBR2ea3qzFptubVBVLY8Xn7G3pSfI7s4rm148perqGicNraRIaLXhYRB7OkAi41P9kuFRr20iY1&amp;t=ffffffffecf19baa"
+            type="text/javascript"></script>
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CB5F850F" />
+        <!--  navs -->
+        <div class = "nav-bar">
+            <div class="navleft navchild">
+                <div class ="imgdiv">
+                    <img src="/images/01000.jpg" class="imglogo">
+                </div>
+            </div>
+            <div class="navright navchild">
+                <div>
+                    <button onclick="location.href = 'http://localhost:8081/login.html';">Client Log-in</button>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div id="mobileheader">
+                <a href="index.html"><img src="img/CPPJ_Mobile_Header.jpg" /></a>
+            </div>
+            <div id="header" class="clearfix">
+                </div>
+            </div>
+           
+
+            <!-- #nav-featured -->
+            <div style="clear: both;"></div>
+            <!-- #intro -->
+            <div class="grid-wrapper">
+
+                <div class="sf_cols grid-container">
+                    <div style="" class="sf_colsOut sf_1col_1_100">
+                        <div style="" id="GridContainer_C004_Col00"
+                            class="sf_colsIn sf_1col_1in_100">
+
+                            <h1 style="text-align: center; padding: 5px; font-size: 25px;">ARM Internal Portal</h1>
+                            <div
+                                style="margin: 0px auto; padding: 5px; float: none; display: table; position: relative;">
+
+                                <form id="form-id" name="StudentRegistration" action="#"
+                                    onsubmit="return validateAndSubmit();">
+                                    <div style="padding: 5px;" class="application-form-row">
+                                        <!-- <span style="margin-right: 5px;" class="application-form-label">
+                                            Company Name
+                                        </span>
+                                        <span class="application-form-data">
+                                            <input style="width: 150px;" type=text name=firstname id="firstname"
+                                                size="30">
+                                        </span> -->
+                                        <label for="CompanyName"><b>Company Name</b></label>
+                                        <input type="text" placeholder="Enter Company Name" name="firstname" id="firstname"
+                                                size="30">
+                                    </div>
+
+                                    <div style="padding: 5px;" class="application-form-row">
+                                        <!-- <span style="margin-right: 5px;" class="application-form-label">
+                                            Book Name
+                                        </span>
+                                        <span class="application-form-data">
+                                            <input style="width: 150px;" type="text" name="lastname" id="lastname"
+                                                size="30">
+                                        </span> -->
+                                        <label for="BookName"><b>Book Name</b></label>
+                                        <input type="text" placeholder="Enter Book Name" name="lastname" id="lastname"
+                                                size="30">
+                                    </div>
+
+                                    <div style="padding: 5px;" class="application-form-row">
+                                        <!-- <span style="margin-right: 8px;" class="application-form-label">
+                                        Book Reference Number 
+                                        </span>
+                                        <span class="application-form-data">
+                                            <input style="width: 150px;" type="text" name="suid" id="suid" size="10"
+                                                type="number" pattern="[0-9]*"
+                                                oninvalid="setCustomValidity('Plz enter only numbers')"
+                                                onchange="try{setCustomValidity('')}catch(e){}">
+                                        </span> -->
+                                        <label for="BookReferenceNumber"><b>Book Reference Number</b></label>
+                                        <input type="text" placeholder="Enter Book Number" name="suid" id="suid"
+                                                size="10" type="number" pattern="[0-9]*">
+                                    </div>
+
+                                    <div style="padding: 5px;" class="application-form-row">
+                                        <!-- <span style="margin-right: 35px;" class="application-form-label">
+                                            Email
+                                        </span>
+                                        <span class="application-form-data">
+                                            <input style="width: 150px;" type="text" name="emailid" id="emailid"
+                                                size="30">
+                                        </span> -->
+                                        <label for="Email"><b>Email</b></label>
+                                        <input type="text" placeholder="Enter Email" name="emailid" id="emailid"
+                                                size="30">
+                                    </div>
+
+
+                                    <div style="padding: 3px;" class="application-form-row">
+                                       
+                                            <input enctype="multipart/form-data" onchange="inputChanged(event)" id="uploadID" type="file" name="resume" />
+                                            <!-- <input type="submit" value="Upload Resume" /> -->
+                                        
+                                    </div>
+
+                                    
+
+                                    <div style="text-align: center; padding: 5px; "
+                                        class="submit-button">
+                                        <!-- <button onclick="document.getElementById('form-id').submit();"> Submit </button> -->
+                                        <input type="submit" value="Submit Form" class ="registerbtn"/>
+
+
+                                        <!-- <div onclick="document.getElementById('form-id').submit();">Submit</div> -->
+                                    </div>
+                                </form>
+
+                                
+                                <!-- public/index.html file -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!--div footer-->
+        </div>
+        <!--div container-->
+
+
+        <script type="text/javascript">
+            //<![CDATA[
+            ; (function () {
+                function loadHandler() {
+                    var hf = $get('ctl09_TSSM');
+                    if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                    hf.value += ';Telerik.Sitefinity.Resources, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=null:en:a6635f48-e22f-44c2-8ae2-67269b80c83c:7a90d6a';
+                    Sys.Application.remove_load(loadHandler);
+                };
+                Sys.Application.add_load(loadHandler);
+            })();//]]>
+        </script>
+    </div>
+</body>
+
+</html>

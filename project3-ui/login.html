@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>
+Login page
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style type="text/css">
+	body
+	{
+	    background-color: #eee;
+	}
+
+.logindiv
+{
+	background-color: #505763;
+	width: 500px;
+    height: 500px;
+	
+	margin-right: auto;
+    margin-left: auto;
+	border: 3px;
+	
+	text-align: center;
+	margin-top:  50px;
+
+}
+.contentdiv
+{
+	padding-top: 80px;
+    
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+   
+  margin-bottom: 15px;
+
+
+}
+
+.icon {
+  padding: 10px;
+  background: #ddd;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 16px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+</style>
+<body>
+
+<div class="logindiv">
+		<div class="contentdiv">
+			<h4 style="text-align: center; padding: 5px; font-size: 20px; color: white;">ARM Portal <br>Login</h4>
+			<form name="login">
+				<div  class="input-container">
+			    <i class="fa fa-user icon"></i>
+			 		<input type="text" class ="input-field" placeholder="User Email" name="userid" id="firstname"   size="30">
+				</div>
+				<div  class="input-container">
+				    <i class="fa fa-key icon"></i>
+				 		<input type="password" class ="input-field" placeholder="User Password" name="pswrd" id="password"   size="30">
+				</div>
+				<div  class="input-container">
+				    <input type="button" value="Login" onclick="check(this.form)" class ="registerbtn"/>
+			    </div>
+			</form>
+		</div>
+		
+	</div>
+ <script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "arm@gmail.com" && form.pswrd.value == "arm@gmail.com")
+  {
+    window.open('getAllFiles.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+</body>
+</html>
